@@ -9,7 +9,11 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'dashboard'
+  layout: 'dashboard',
+
+  mounted() {
+    const posts = this.$axios.$get('/post')
+  }
 })
 </script>
 
