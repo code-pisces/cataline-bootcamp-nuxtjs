@@ -1,17 +1,33 @@
 <template>
-  <div class="home">
-    <h1>Sobre</h1>
+  <div class="post">
+    <h1>Postagem</h1>
+
+    <h2>{{ title }}</h2>
+    <p>{{ content }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
-</script>
-
-<style scoped>
-a.nuxt-link-exact-active {
-  font-weight: bold;
+const sleep = () => {
+  return new Promise((resolve) => setTimeout(resolve, 1500))
 }
-</style>
+
+export default Vue.extend({
+  async asyncData() {
+    await sleep()
+
+    const title = 'My Post Title'
+    const content = 'Lorem ipsum dolor sit...'
+
+    return { title, content }
+  },
+  data() {
+    return {
+      title: '',
+      content: ''
+    }
+  }
+})
+</script>

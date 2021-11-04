@@ -9,6 +9,17 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  data() {
+    return {
+      title: 'dynamic title'
+      }
+  },
+
+  head(this: any) {
+   return{
+    title: this.title,
+  }},
+
   layout: 'dashboard',
 
   mounted() {
