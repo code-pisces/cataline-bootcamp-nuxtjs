@@ -1,35 +1,28 @@
 <template>
-  <div class="home">
-    <NuxtLogo />
-    <h1>Home</h1>
+  <div class="wrapper">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<style lang="scss" scoped>
+.wrapper {
+  display: grid;
+  grid-template-rows: 200px;
+  grid-auto-flow: column;
+  grid-gap: 0.5rem;
 
-export default Vue.extend({
-  data() {
-    return {
-      title: 'dynamic title'
-      }
-  },
-
-  head(this: any) {
-   return{
-    title: this.title,
-  }},
-
-  layout: 'dashboard',
-
-  mounted() {
-    const posts = this.$axios.$get('/post')
+ @include screen('small') {
+    grid-template-columns: 1fr;
   }
-})
-</script>
 
-<style scoped>
-a.nuxt-link-exact-active {
-  font-weight: bold;
+ @include screen('medium') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .box {
+    background-color: color('dark', 'darkest');
+  }
 }
 </style>

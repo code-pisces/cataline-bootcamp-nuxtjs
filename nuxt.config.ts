@@ -1,21 +1,25 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-ts',
+    title: 'IBook',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-BR'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Uma nova maneira de ler livros on-line!'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['normalize.css/normalize.css', '@/assets/scss/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/hello.client'],
@@ -30,7 +34,11 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
+
+  styleResources: {
+    scss: ['@/components/bosons/*.scss']
+  },
 
   axios: {
     baseUrl: process.env.NOV_ENV === 'production' ? '' : 'http://localhost:3333'
