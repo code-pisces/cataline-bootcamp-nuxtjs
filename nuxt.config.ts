@@ -25,7 +25,7 @@ export default {
   plugins: ['@/plugins/hello.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false }], // seta como auto import em todas as subpastas
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
