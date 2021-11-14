@@ -1,7 +1,5 @@
 <template>
-  <div class="box">
-    <h1>Homepage</h1>
-  </div>
+  <HomeTemplate />
 </template>
 
 <script lang="ts">
