@@ -1,9 +1,5 @@
 <template>
-  <!--<HomeTemplate />-->
-  <div class="count">
-    <h1>{{ $count }}</h1>
-    <button @click="increment">Incremetar</button>
-  </div>
+  <HomeTemplate />
 </template>
 
 <script lang="ts">
@@ -12,15 +8,9 @@ import { books } from '@/store'
 
 export default Vue.extend({
   layout: 'ibook',
-  computed: {
-    $count() {
-      return books.$count
-    }
-  },
-  methods: {
-    increment() {
-      books.increment(1)
-    }
+
+  async asyncData() {
+    await books.index()
   }
 })
 </script>
