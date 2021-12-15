@@ -33,15 +33,22 @@ export default {
     '@nuxt/typescript-build'
   ],
 
+  ssr: true,
+  target: 'server',
+
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    'cookie-universal-nuxt'
+  ],
 
   styleResources: {
     scss: ['@/components/bosons/*.scss']
   },
 
   axios: {
-    baseUrl: 'https://ibook-api.herokuapp.com'
+    baseUrl: 'http://localhost:3333'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -1,5 +1,5 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
-import { Book } from '@/models'
+import { Book } from '~/models'
 import { $axios } from '@/utils/nuxt-instance'
 
 interface Show {
