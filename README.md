@@ -1,69 +1,58 @@
-# nuxt-ts
+<h1 align="center">iBook</h1>
+<p align="center">Este projeto foi construído no Bootcamp da Cataline como desafio do curso de NuxtJS, sinta-se a vontade para usá-lo você também :). Antes de rodar essa aplicação na sua máquina, siga a <a href="https://github.com/cataline4learning/ibook-api">documentação da api</a>  e execute-a.</p>
 
-## Build Setup
+<img src="./.github/banner-1.png" alt="Apresentação"/>
+
+No curso de NuxtJS aprendemos:
+ * Auto Import de Components aplicando Atomic Design.
+ * NuxtJS Layouts e rotas de erro customizadas.
+ * NuxtJS Middleware.
+ * NuxtJS Pages e roteamento.
+ * NuxtJS Plugins.
+ * SSR com NuxtJS.
+ * Uso do Vuex com TypeScript no NuxtJS.
+ * SEO e Tag Heads.
+
+<h2 align="center">Apresentando o projeto</h2>
+
+<img src="./.github/banner-2.png" alt="Sobre"/>
+
+O iBook é um projeto de leitura de livros on-line, com uma enxuta e amigável interface.
+Pode conferir o UI/UX em: <a href="https://xd.adobe.com/view/178258a2-beb1-431b-8067-afc22ad867b3-42d1/">Abrir Adobe XD</a>.
+
+<img src="./.github/banner-3.png" alt="Informações do Livro"/>
+<img src="./.github/banner-4.png" alt="Leitura"/>
+
+<h2 align="center">Autenticação e rotas protegidas</h2>
+
+Com o recurso Middleware do NuxtJS, criamos como desafio uma rota autenticada com direito a login e logout, caso queira testar a api tem um usuário de teste:
+
+```json
+{
+  email: "caty@cataline.io",
+  password: "abc123"
+}
+```
+<img src="./.github/login.png" alt="Entrar"/>
+<img src="./.github/dashboard.png" alt="Dashboard"/>
+
+<h2 align="center">Página de Erro</h2>
+
+As vezes o usuário tem uma busca inexistente no site, e precisamos retornar uma página de erro, usando o NuxtJS Layouts, resolvemos o problema.
+
+<img src="./.github/error.png" alt="Error"/>
+
+<h2 align="center">Executando localmente</h2>
 
 ```bash
-# install dependencies
-$ yarn install
+# Clonando o projeto
+git clone https://github.com/code-pisces/cataline-bootcamp-nuxtjs
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# Entrando e instalando dependências
+cd cataline-bootcamp-nuxtjs && yarn
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# Rodando o server
+yarn dev
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<p align="center">Feito por Gustavo Amorim no Bootcamp da Cataline.</p>
